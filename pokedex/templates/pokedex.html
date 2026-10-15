@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=3">
+
+</head>
+
+
+<body>
+    <h1>Pokédex App</h1>
+    <div id="content-box">
+        <div id="pokemon-list">
+            <label class="search-label" for="pokemon-search">Search Pokémon</label>
+            <input id="pokemon-search" type="search" placeholder="Name or number..." autocomplete="off">
+            <p id="search-status" aria-live="polite"></p>
+            <div id="pokemon-results"></div>
+        </div>
+        <div id="pokemon-info">
+            <span id="pokemon-number">#001</span>
+            <h2 id="pokemon-name">BULBASAUR</h2>
+            <img id="pokemon-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Selected Pokémon">
+            <div id="pokemon-types"></div>
+            <div id="pokemon-description"></div>
+        </div>
+        <div id="pokemon-stats" aria-live="polite">
+            <h2>Base Stats</h2>
+            <div id="stats-list"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='pokedex.js') }}?v=3" defer></script>
+</body>
+</html>
